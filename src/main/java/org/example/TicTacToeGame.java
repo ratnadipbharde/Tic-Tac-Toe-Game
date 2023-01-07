@@ -1,16 +1,15 @@
 package org.example;
 
+import java.util.Scanner;
+
 public class TicTacToeGame {
-    public static void main(String[] args) {
-        System.out.println("--------------------------------------------");
-        System.out.println("\t\t* Welcome To Game Tic Tac Toe *");
-        System.out.println("--------------------------------------------\n");
-        char position[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
-        printBoard(position);
+    public char chooseLetter() {
+        System.out.print("Please Chose Your letter (X or O) :");
+        Scanner sc=new Scanner(System.in);
+        return sc.next().toUpperCase().charAt(0);
     }
 
-    private static void printBoard(char position[]) {
-
+    public void printBoard(char[] position) {
         System.out.println("\t\t\t|-----|-----|-----|");
         System.out.println("\t\t\t|  " + position[1] + "  |  " + position[2] + "  |  " + position[3] + "  |");
         System.out.println("\t\t\t|-----|-----|-----|");
